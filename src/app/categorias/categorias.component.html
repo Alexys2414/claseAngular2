@@ -1,0 +1,17 @@
+  <div>
+    <h2>Venteo</h2>
+    <ul>
+      <li *ngFor="let categoria of categorias"><span>{{ categoria.nombre }}</span> 
+    </ul>
+  </div>
+
+  <div class="container">
+    <div *ngFor="let categoria of categorias" class="categoria">
+      <a routerLink="/" routerLinkActive="active" (click)="obtenerInformacionCategoria(categoria.id)">
+        <div class="img-container">
+          <img src="{{ obtenerRutaImagen(categoria.id) }}" alt="{{ categoria.nombre }}">
+        </div>
+        <div>{{ categoria.nombre }}</div>
+      </a>
+    </div>
+  </div>
