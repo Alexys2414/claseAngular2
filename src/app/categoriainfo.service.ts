@@ -10,7 +10,13 @@ export class CategoriaService {
   
   constructor(private http: HttpClient){}
 
+  getAllCategorias(){
+    return this.http.get(`${this.baseUrl}/categories`)
+  }
+
   getCategoriaById(id:number): Observable<any>{
     return this.http.get(`${this.baseUrl}/category/${id}`)
   }
+
+
 }

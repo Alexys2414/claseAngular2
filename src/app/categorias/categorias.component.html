@@ -1,17 +1,18 @@
   <div>
     <h2>Venteo</h2>
     <ul>
-      <li *ngFor="let categoria of categorias"><span>{{ categoria.nombre }}</span> 
+      <li *ngFor="let categoria of categorias">
+        <span>{{ categoria.name }}</span> 
     </ul>
   </div>
 
   <div class="container">
     <div *ngFor="let categoria of categorias" class="categoria">
-      <a routerLink="/" routerLinkActive="active" (click)="obtenerInformacionCategoria(categoria.id)">
+      <a routerLink="/" routerLinkActive="active" >
         <div class="img-container">
-          <img src="{{ obtenerRutaImagen(categoria.id) }}" alt="{{ categoria.nombre }}">
+          <img src="categoria.imageUrl" >
         </div>
-        <div>{{ categoria.nombre }}</div>
-      </a>
+        <p>{{ categoria.name }}</p>
+      </a> 
     </div>
   </div>

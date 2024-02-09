@@ -54,7 +54,7 @@ div {
 
   .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-columns: repeat(5, 1fr); /* 4 columnas */
     grid-template-rows: repeat(2, auto); /* 2 filas */
     gap: 16px;
     justify-content: center;
@@ -77,6 +77,7 @@ div {
     cursor: pointer;
     background-color: #0057b8;
     color: white;
+    
   }
   
   /* Estilo para la imagen dentro de la categoría */
@@ -86,6 +87,12 @@ div {
 
 
   }
-  .categoria:hover img {
-    filter: invert(1);
+  a{
+    text-decoration: none;
+    color: #000000;
+    
+  }
+
+  .categoria:hover p {
+    color: white;
   }
