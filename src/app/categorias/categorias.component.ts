@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { CategoriaService } from '../categoriainfo.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AuctionComponent } from '../auction/auction.component';
+import { AuctionService } from '../auction.service';
 
 
 @Component({

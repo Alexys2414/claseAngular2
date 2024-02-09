@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CategoriaService } from '../categoriainfo.service';
+import { AuctionComponent } from '../auction/auction.component';
+import { AuctionService } from '../auction.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-category',
   standalone: true,
-  imports: [],
+  imports: [AuctionComponent,CommonModule],
   templateUrl: './category.component.html',
   styleUrl: './category.component.css'
 })

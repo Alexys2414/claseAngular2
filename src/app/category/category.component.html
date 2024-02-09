@@ -7,3 +7,5 @@
       <p>{{ auction.name }}</p>
     </div>
   </div>
+  <app-auction *ngFor="let auction of auctions" [auction]="auction"></app-auction>
+
