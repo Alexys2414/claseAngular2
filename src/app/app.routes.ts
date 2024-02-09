@@ -3,6 +3,6 @@ import { CategoryComponent } from './category/category.component';
 import { NgModel } from '@angular/forms';
 
 export const routes: Routes = [
-    { path: 'categoria/:id', component: CategoryComponent }
+    { path: 'category/:id', component: CategoryComponent }
 ];
 

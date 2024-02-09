@@ -1,1 +1,9 @@
-<p>category works!</p>
+<div class="container">
+    <h2>{{ category?.name }}</h2>
+    <p>{{ category?.description }}</p>
+    
+    <h3>Subastas de esta categoría:</h3>
+    <div *ngFor="let auction of auctions" class="auction">
+      <p>{{ auction.name }}</p>
+    </div>
+  </div>

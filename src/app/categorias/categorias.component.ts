@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { CategoriaService } from '../categoriainfo.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -8,21 +8,19 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-categorias',
   standalone: true,
-  imports: [RouterOutlet,CommonModule, RouterLink, RouterLinkActive,HttpClientModule],
+  imports: [RouterOutlet,CommonModule, RouterLink, RouterLinkActive,HttpClientModule,RouterModule],
   templateUrl: './categorias.component.html',
   styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent implements OnInit{
   categorias: any[] = [];
 
-  constructor(private categoriaService: CategoriaService) {}
+  constructor(private categoriaService: CategoriaService,
+    private router: Router) {}
 
   ngOnInit(): void {
     this.obtenerCategorias();
   }
-
-
-
 
   obtenerCategorias(): void {
     this.categoriaService.getAllCategorias().subscribe(
@@ -34,6 +32,8 @@ export class CategoriasComponent implements OnInit{
       }
     );
   }
+  obtenerInformacionCategoria(id: number): void {
+    // Redirige a la ruta correspondiente con el ID de la categoría
+    this.router.navigate(['/category', id]);
+  }
 }
-
-
